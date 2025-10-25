@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import PageNavigator from "@/components/PageNavigator";
 import { Card } from "@/components/ui/card";
 
 const Blog = () => {
@@ -24,7 +25,7 @@ const Blog = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background animate-slide-in-right">
       <Navigation />
       <main className="pt-32 px-6 md:px-12 max-w-7xl mx-auto pb-20">
         <div className="space-y-12 animate-fade-in">
@@ -55,6 +56,7 @@ const Blog = () => {
           </div>
         </div>
       </main>
+      <PageNavigator />
     </div>
   );
 };

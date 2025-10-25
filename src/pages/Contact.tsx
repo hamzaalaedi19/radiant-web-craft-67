@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import PageNavigator from "@/components/PageNavigator";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -6,7 +7,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background animate-slide-in-right">
       <Navigation />
       <main className="pt-32 px-6 md:px-12 max-w-7xl mx-auto pb-20">
         <div className="space-y-12 animate-fade-in">
@@ -71,6 +72,7 @@ const Contact = () => {
           </div>
         </div>
       </main>
+      <PageNavigator />
     </div>
   );
 };

@@ -1,8 +1,9 @@
 import Navigation from "@/components/Navigation";
+import PageNavigator from "@/components/PageNavigator";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background animate-slide-in-right">
       <Navigation />
       <main className="pt-32 px-6 md:px-12 max-w-7xl mx-auto">
         <div className="space-y-8 animate-fade-in">
@@ -39,6 +40,7 @@ const About = () => {
           </div>
         </div>
       </main>
+      <PageNavigator />
     </div>
   );
 };
