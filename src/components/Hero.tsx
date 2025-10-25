@@ -1,7 +1,12 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
+  const scrollToNext = () => {
+    window.scrollBy({ top: window.innerHeight, behavior: "smooth" });
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 md:px-12">
       <div className="max-w-7xl w-full">
@@ -30,7 +35,8 @@ const Hero = () => {
             <Button
               variant="default"
               size="icon"
-              className="h-16 w-16 md:h-20 md:w-20 rounded-full bg-accent hover:bg-accent/90 hover:scale-110 transition-all duration-300 animate-float"
+              onClick={scrollToNext}
+              className="h-16 w-16 md:h-20 md:w-20 rounded-full bg-accent hover:bg-accent/90 hover:scale-110 transition-all duration-300 animate-float cursor-pointer"
             >
               <ArrowRight className="h-8 w-8 md:h-10 md:w-10" />
             </Button>

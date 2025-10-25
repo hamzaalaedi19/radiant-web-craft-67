@@ -35,13 +35,29 @@ const Navigation = () => {
         </ul>
       </div>
       
-      <div className="flex items-center gap-6">
+      <div className="flex items-center gap-4">
         <a 
           href="mailto:contact@portfolio.com" 
           className="hidden lg:block text-sm text-muted-foreground hover:text-accent transition-colors"
         >
           Email: <span className="text-accent">contact@portfolio.com</span>
         </a>
+        <Button
+          variant="outline"
+          size="sm"
+          className="hover:bg-accent hover:text-background transition-colors"
+          asChild
+        >
+          <Link to="/login">Login</Link>
+        </Button>
+        <Button
+          variant="default"
+          size="sm"
+          className="bg-accent hover:bg-accent/90 text-background transition-colors"
+          asChild
+        >
+          <Link to="/register">Register</Link>
+        </Button>
         <Button
           variant="ghost"
           size="icon"
