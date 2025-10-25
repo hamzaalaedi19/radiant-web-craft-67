@@ -44,10 +44,32 @@ const Hero = () => {
         </div>
       </div>
       
-      <div className="absolute bottom-12 left-6 md:left-12 flex items-center gap-4 animate-pulse-slow">
-        <span className="text-sm text-accent font-medium">Scroll</span>
-        <div className="w-24 h-0.5 bg-accent" />
-      </div>
+      <button 
+        onClick={scrollToNext}
+        className="absolute bottom-12 left-6 md:left-12 flex items-center gap-4 group cursor-pointer hover:scale-105 transition-transform"
+      >
+        <span className="text-sm text-accent font-medium animate-pulse">Scroll</span>
+        <div className="relative w-24 h-0.5 bg-accent/30 overflow-hidden">
+          <div className="absolute h-full w-8 bg-accent animate-scroll-line" />
+        </div>
+        <div className="animate-bounce-slow">
+          <svg 
+            width="12" 
+            height="12" 
+            viewBox="0 0 12 12" 
+            fill="none" 
+            className="text-accent"
+          >
+            <path 
+              d="M6 0L6 10M6 10L2 6M6 10L10 6" 
+              stroke="currentColor" 
+              strokeWidth="1.5" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+            />
+          </svg>
+        </div>
+      </button>
     </section>
   );
 };

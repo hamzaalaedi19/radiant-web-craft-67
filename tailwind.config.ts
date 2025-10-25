@@ -105,6 +105,22 @@ export default {
           "50%": {
             opacity: "0.5"
           }
+        },
+        "scroll-line": {
+          "0%": {
+            transform: "translateX(-100%)"
+          },
+          "100%": {
+            transform: "translateX(300%)"
+          }
+        },
+        "bounce-slow": {
+          "0%, 100%": {
+            transform: "translateY(0)"
+          },
+          "50%": {
+            transform: "translateY(5px)"
+          }
         }
       },
       animation: {
@@ -113,6 +129,8 @@ export default {
         "fade-in": "fade-in 0.5s ease-out",
         "slide-in": "slide-in 0.5s ease-out",
         "pulse-slow": "pulse-slow 3s ease-in-out infinite",
+        "scroll-line": "scroll-line 2s ease-in-out infinite",
+        "bounce-slow": "bounce-slow 2s ease-in-out infinite"
       },
     },
   },
